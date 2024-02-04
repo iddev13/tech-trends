@@ -1,0 +1,23 @@
+.postCard {
+  @apply relative flex flex-col rounded-xl h-60 min-w-full w-full p-2 mb-4 md:mb-0 border overflow-hidden;
+  box-shadow: 0px 0px 5px 1px #83838357;
+  h3 {
+    @apply text-base font-medium capitalize whitespace-nowrap overflow-hidden text-ellipsis;
+  }
+  p {
+@apply whitespace-nowrap overflow-hidden text-ellipsis mb-2;
+    /* flex: 1 1 auto; */
+  }
+  & > img,
+  & > source {
+    @apply block h-32 w-48 object-cover mb-2;
+  }
+  a {
+    @apply inline-flex items-center py-1 px-3 bg-purple-500 rounded-xl transition-colors;
+    @media (pointer: fine) {
+      &:hover {
+        @apply bg-purple-800 text-white;
+      }
+    }
+  }
+}

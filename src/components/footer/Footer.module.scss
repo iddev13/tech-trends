@@ -1,0 +1,17 @@
+.footer {
+  @apply py-5 ;
+  nav {
+    @apply flex justify-around gap-5;
+  }
+}
+.groupTitle {
+  @apply font-bold capitalize;
+}
+.link {
+  @apply text-sm transition capitalize;
+  @media (pointer: fine) {
+    &:hover {
+      @apply text-blue-500;
+    }
+  }
+}

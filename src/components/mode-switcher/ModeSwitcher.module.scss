@@ -1,0 +1,22 @@
+.switcher {
+  @apply mr-2 sm:mr-4 cursor-pointer;
+
+  &__inner {
+    @apply bg-header-link-hover-text-color w-8 h-3 relative rounded-3xl transition-all duration-300;
+  }
+}
+
+.colorsIcon {
+  @apply w-5 h-5 flex items-center justify-center absolute top-1/2 left-0 -translate-y-1/2  transition-all duration-300 rounded-full bg-black text-xs;
+  border: 2px solid var(--blue-light);
+
+  & svg {
+    @apply transition-all duration-300 fill-white;
+  }
+  &__dark {
+    @apply left-full -translate-x-full bg-white;
+    & svg {
+      fill: orange;
+    }
+  }
+}
