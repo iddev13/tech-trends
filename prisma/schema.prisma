@@ -15,10 +15,10 @@ model User {
   email     String   @unique
   username  String   @unique
   password  String
-  createdAt DateTime @default(now()) 
+  createdAt DateTime @default(now())
   updateAt  DateTime @updatedAt
   role      Role     @default(USER)
-  post Post[]
+  post      Post[]
 }
 
 enum Role {
@@ -43,5 +43,5 @@ model Post {
   tagId     String
   tag       Tag      @relation(fields: [tagId], references: [id])
   userId    String
-  user      User      @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
 }
